@@ -94,7 +94,7 @@ GEM
       railties (>= 3.0.0)
     faker (2.5.0)
       i18n (~> 1.6.0)
-    faraday (0.16.2)
+    faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
     ffi (1.11.1)
     figaro (1.1.1)
@@ -283,6 +283,7 @@ DEPENDENCIES
   devise-async
   factory_girl_rails
   faker
+  faraday (~> 0.15.4)
   figaro
   jbuilder (~> 2.5)
   jquery-rails

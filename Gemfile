@@ -22,10 +22,12 @@ gem 'active_model_serializers'
 gem 'devise'
 gem 'devise-async'
 gem 'jbuilder', '~> 2.5'
+gem 'faraday', '~> 0.15.4'
 gem 'jwt'
 gem 'pundit'
 gem 'rack-cors'
 gem 'searchkick'
+
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
