@@ -1,6 +1,11 @@
-if Rails.env == 'production'
-  url = ENV["BONSAI_URL"]
-  transport_options = { request: { timeout: 250 } }
-  options = { hosts: url, retry_on_failure: true, transport_options: transport_options }
-  Searchkick.client = Elasticsearch::Client.new(options)
+if ENV.include?("PROD")
+  Elasticsearch::Model.client = Elasticsearch::Client.new hosts: [{
+                                                                      host: ENV["FOUNDELASTICSEARCH_URL"].split("https://")[1],
+                                                                      user: ENV["ES_USER"],
+                                                                      port: "9243",
+                                                                      password: ENV["ES_PW"],
+                                                                      scheme: "https"
+                                                                  }]
+else
+  Elasticsearch::Model.client = Elasticsearch::Client.new host: "http://localhost:9200"
 end
