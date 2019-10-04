@@ -21,7 +21,7 @@ RSpec.describe 'send message' do
 
   context 'from receivers view' do
     let(:browser) { Support::SignUp.new.call({:email => sender.email, :password => '123456'}) }
-    it 'message should be sent' do
+    it 'message should be received' do
       browser.a(:href, '/home/rooms').click
       browser.a(:href, "/home/rooms/#{room.id}").click
       browser.text.should match(/.*#{test_message_content}.*/)
