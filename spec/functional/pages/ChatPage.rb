@@ -20,8 +20,9 @@ class ChatPage
 
   def send_message(content)
     message_field.set(content)
-    sleep 2
+    sleep 1
     send_button.click
+    sleep 1
     self
   end
 end
