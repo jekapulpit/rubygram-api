@@ -30,8 +30,9 @@ RSpec.describe 'send message', type: :feature do
       browser.text.should match(/.*#{test_message_content}.*/)
     end
   end
+
   after(:context) do
-    Message.last.destroy
+    Message.destroy_all
     Room.destroy_all
     User.destroy_all
   end
