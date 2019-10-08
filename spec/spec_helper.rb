@@ -110,6 +110,13 @@ RSpec.configure do |config|
     @browser.goto(root_url)
   end
 
+
+  config.after :context, type: :feature do
+    Message.destroy_all
+    Room.destroy_all
+    User.destroy_all
+  end
+
   # Close that browser after each example.
   config.after :all, type: :feature do
     @browser.close if @browser
