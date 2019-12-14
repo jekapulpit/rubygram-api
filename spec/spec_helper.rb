@@ -112,6 +112,7 @@ RSpec.configure do |config|
 
 
   config.after :context, type: :feature do
+    DefaultSetting.destroy_all
     Message.destroy_all
     Room.destroy_all
     User.destroy_all
