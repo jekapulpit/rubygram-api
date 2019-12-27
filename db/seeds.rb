@@ -10,10 +10,4 @@
 
 DefaultSetting.create(setting_type: 'max_chats', value: 5)
 puts 'test'
-puts 'test'
-puts 'test'
-puts 'test'
-puts 'test'
-puts 'test'
-puts 'test'
 DefaultSetting.create(setting_type: 'max_users', value: 5)
