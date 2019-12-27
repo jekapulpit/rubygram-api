@@ -9,5 +9,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 DefaultSetting.create(setting_type: 'max_chats', value: 5)
-puts 'test'
 DefaultSetting.create(setting_type: 'max_users', value: 5)
